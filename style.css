@@ -1,21 +1,27 @@
-/* Base styles */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* General Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  background-color: #e7ecf2;
   color: #333;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+  animation: Gradient 15s ease infinite;
 }
 
-/* Header styles */
+@keyframes Gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Styles */
 header {
-  background-color: #5d5c61;
-  color: #fff;
-  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 20px 0;
   text-align: center;
   position: relative;
 }
@@ -36,7 +42,7 @@ header h1 {
   font-size: 2.5rem;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 nav {
   display: flex;
   justify-content: center;
@@ -45,17 +51,19 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
-nav a:hover, nav a:focus {
-  color: #ff6b6b;
+nav a.active,
+nav a:hover {
+  color: #74ebd5;
+  text-decoration: underline;
 }
 
-/* Hero section styles */
+/* Hero Section Styles */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
   color: #fff;
@@ -74,21 +82,30 @@ nav a:hover, nav a:focus {
   margin: auto;
 }
 
-/* Main content styles */
+/* Main Content Styles */
 main {
-  padding: 2rem;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
-  background-color: #5d5c61;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
   margin: 0;
+  padding: 0;
 }
 
 /* Animation */
@@ -101,3 +118,15 @@ header, nav, .hero, main, footer {
   animation: fadeIn 1.5s ease-in;
 }
 
+/* Neumorphism effect for buttons and cards */
+button, .collection-item {
+  background: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 6px 6px 16px #a3a3a3,
+             -6px -6px 16px #ffffff;
+}
+
+button:hover, .collection-item:hover {
+  box-shadow: 11px 11px 21px #a3a3a3,
+             -11px -11px 21px #ffffff;
+}
