@@ -107,6 +107,115 @@ footer p {
   margin: 0;
   padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4; /* Slightly reduced line height for a more compact look */
+  color: #333;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+  animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Styles */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  background: url('berry-pattern.svg') repeat;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+header h1 {
+  font-size: 1.8rem; 
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem; /* Reduced gap */
+  padding: 0.8rem; /* Reduced padding */
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem; /* Adjusted padding */
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: #74ebd5;
+  text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 1.5rem; /* Decreased padding */
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 1.8rem; 
+  margin-bottom: 0.8rem; 
+}
+
+.hero p {
+  font-size: 1rem; 
+  max-width: 550px; 
+  margin: auto;
+}
+
+/* Main Content Styles */
+main {
+  padding: 15px; /* Decreased padding */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px; 
+  margin: 15px auto; 
+  max-width: 750px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Footer Styles */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 0; 
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
 
 /* Animation */
 @keyframes fadeIn {
@@ -115,18 +224,19 @@ footer p {
 }
 
 header, nav, .hero, main, footer {
-  animation: fadeIn 1.5s ease-in;
+  animation: fadeIn 1.2s ease-in; 
 }
 
 /* Neumorphism effect for buttons and cards */
 button, .collection-item {
   background: #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 6px 6px 16px #a3a3a3,
-             -6px -6px 16px #ffffff;
+  border-radius: 8px; 
+  box-shadow: 5px 5px 14px #a3a3a3,
+             -5px -5px 14px #ffffff; 
 }
 
 button:hover, .collection-item:hover {
-  box-shadow: 11px 11px 21px #a3a3a3,
-             -11px -11px 21px #ffffff;
+  box-shadow: 9px 9px 19px #a3a3a3,
+             -9px -9px 19px #ffffff; 
 }
+
